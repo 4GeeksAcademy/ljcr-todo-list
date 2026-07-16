@@ -1,23 +1,82 @@
-# Python Hello
+# Lista de Tareas en Python (CLI)
 
-El boilerplate más básico para comenzar un proyecto en Python en 4Geeks. Inicia tu primer proyecto en Python desde cero.
+Aplicación de consola para gestionar tareas (TODO) con las funciones básicas:
 
-## ¿Qué hacer a continuación?
+- Agregar tareas.
+- Listar tareas.
+- Eliminar tareas.
+- Guardar automáticamente en `todos.csv` para no perder datos al cerrar.
 
-Abre el archivo `main.py` y comienza a escribir tu código.
+## Resumen rápido del proyecto
 
-Ejecuta tu código escribiendo el siguiente comando en tu terminal:
+Este proyecto está hecho en Python y se ejecuta desde terminal.
 
-```bash
-$ python main.py
-```
-
-Puedes crear e incluir tantos archivos de Python (también conocidos como módulos) como desees utilizando las declaraciones de importación.
+- Archivo principal: `app.py`
+- Persistencia de datos: `todos.csv`
+- Interfaz: menú por texto en consola
 
 ## Requisitos
 
-Asegúrate de tener Python instalado en tu computadora. Te recomendamos encarecidamente [instalar Python a través de Pyenv](https://4geeks.com/es/how-to/que-es-pyenv-y-como-instalar-pyenv) para evitar conflictos de versiones en el futuro.
+- Python 3 instalado
 
-### Contribuidores
+Para comprobar tu instalación:
 
-Esta plantilla fue creada como parte de los [Recursos de Python de 4Geeks](https://4geeks.com/es/technology/python) para el aprendizaje en [4Geeks.com](https://4geeks.com) por [Alejandro Sanchez](https://twitter.com/alesanchezr) y [muchos otros contribuyentes](https://github.com/4GeeksAcademy/python-hello/graphs/contributors).
+```bash
+python --version
+```
+
+Si ese comando no funciona, prueba:
+
+```bash
+python3 --version
+```
+
+## Cómo usarlo paso a paso
+
+1. Abre una terminal en la carpeta del proyecto.
+2. Ejecuta la aplicación:
+
+```bash
+python app.py
+```
+
+Si tu sistema usa `python3`, ejecuta:
+
+```bash
+python3 app.py
+```
+
+3. Verás el menú principal con estas opciones:
+	- `1. Agregar`
+	- `2. Listar`
+	- `3. Eliminar`
+	- `4. Salir`
+4. Escribe el número de la opción que quieras usar y presiona `Enter`.
+
+## Ejemplo de uso
+
+1. Selecciona `1` para agregar una tarea.
+2. Escribe el texto de la tarea y confirma con `Enter`.
+3. Selecciona `2` para listar tareas guardadas.
+4. Selecciona `3` y escribe el número de tarea para eliminarla.
+5. Selecciona `4` para salir.
+
+## ¿Dónde se guardan las tareas?
+
+Las tareas se guardan en el archivo `todos.csv` dentro de la misma carpeta del proyecto.
+
+- Al iniciar el programa, las tareas se cargan automáticamente.
+- Al agregar o eliminar una tarea, se actualiza el archivo automáticamente.
+
+## Errores comunes
+
+- Si intentas agregar una tarea vacía, el programa muestra un error.
+- Si intentas eliminar con un número inválido o fuera de rango, el programa lo indica.
+
+## Estructura del proyecto
+
+```text
+.
+├── app.py
+└── README.es.md
+```
